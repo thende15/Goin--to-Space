@@ -16,8 +16,13 @@ h2 {
 }
 h4 {
     font-family: 'Barlow Condensed', sans-serif;
-    color: #ffffff;
+    font-style: normal;
+    font-weight: 400;
     font-size: 16px;
+    line-height: 19px;
+    text-align: center;
+    letter-spacing: 2.7px;
+    color: #D0D6F9;
 }
 h3 {
     font-family: 'Bellefair', serif;

@@ -1,0 +1,12 @@
+@media (max-width: 420px) {
+    header {
+        margin-bottom: 50px;
+        position: relative;
+    }
+}
+@media (min-width: 421px) {
+    header {
+        margin-bottom: 60px;
+        position: relative;
+    }
+}

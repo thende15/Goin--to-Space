@@ -6,12 +6,16 @@ li {
 a {
     text-decoration: none;
 }
+header {
+    background: none;
+}
 @media (max-width: 420px) {
     header {
         display: flex;
         flex-direction: row;
         justify-content: space-around;
         align-items: center;
+        /* position: absolute; */
     }
     nav {
         display: flex;
