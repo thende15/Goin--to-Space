@@ -41,4 +41,6 @@ testem.log
 .DS_Store
 Thumbs.db
 
-src/assets/assets
+src/assets/technology
+src/assets/destinations
+src/assets/home

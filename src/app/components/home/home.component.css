@@ -32,7 +32,7 @@
 }
 @media (min-width: 421px) {
     main {
-        background-image: url('../../../assets/assets/home/background-home-desktop.jpg');
+        background-image: url('../../../assets/home/background-home-desktop.jpg');
         height: 100vh;
     }
 }
