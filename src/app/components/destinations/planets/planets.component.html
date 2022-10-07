@@ -1,2 +1,16 @@
-<img [src]="destinations[0].images.png" alt="">
-<p>{{destinations[0].description}}</p>
+<section>
+    <h4>01 PICK YOUR DESTINATION</h4>
+    <img [src]="destinations[0].images.png" alt="" class="planets">
+    <nav>
+        <ul *ngFor="let planets of destinations">
+        <a [routerLink]="['/destinations', planets.name]"><li>{{planets.name}}</li></a>
+        </ul>
+    </nav>
+    <h2>{{planet.name | uppercase}}</h2>
+    <p>{{planet.description}}</p>
+    <article>
+        <p>AVG. DISTANCE <br> {{planet.distance}}</p>
+        <p>EST. TRAVEL TIME <br> {{planet.travel}}</p>
+    </article>
+</section>
+
