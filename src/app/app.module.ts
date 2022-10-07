@@ -11,6 +11,7 @@ import { TechnologyComponent } from './components/technology/technology.componen
 import { DestinationsComponent } from './components/destinations/destinations.component';
 
 import { DataService } from './data.service';
+import { PlanetsComponent } from './components/destinations/planets/planets.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,7 @@ import { DataService } from './data.service';
     MainNavComponent,
     CrewComponent, 
     TechnologyComponent, 
-    DestinationsComponent
+    DestinationsComponent, PlanetsComponent
   ],
   imports: [
     BrowserModule,

@@ -11,16 +11,9 @@ export class DestinationsComponent implements OnInit {
   constructor(private getData: DataService) { }
   
   ngOnInit(): void {
-    this.getDestinations();
+    
   }
 
-  destinations: any
-  getDestinations() {
-    return this.getData.getData().subscribe((data) => {
-      this.destinations = [...Object.values(data)[1]]
-      console.log(this.destinations)
-      return this.destinations
-    })
-  }
+  
   
 }
