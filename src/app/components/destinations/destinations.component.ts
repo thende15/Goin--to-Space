@@ -17,10 +17,10 @@ export class DestinationsComponent implements OnInit {
   destinations: any
   getDestinations() {
     return this.getData.getData().subscribe((data) => {
-      this.destinations = Object.keys(data)[1]
+      this.destinations = [...Object.values(data)[1]]
       console.log(this.destinations)
       return this.destinations
     })
   }
-
+  
 }
