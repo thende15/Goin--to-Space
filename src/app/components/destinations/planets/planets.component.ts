@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { ActivatedRoute, Params } from '@angular/router';
+import { ActivatedRoute, Data, Params } from '@angular/router';
 import { DataService } from 'src/app/data.service';
 @Component({
   selector: 'app-planets',
@@ -7,7 +7,7 @@ import { DataService } from 'src/app/data.service';
   styleUrls: ['./planets.component.css']
 })
 export class PlanetsComponent implements OnInit {
-  [x: string]: any;
+
 
   constructor(private route: ActivatedRoute,
     private getData: DataService) { }
@@ -21,41 +21,57 @@ export class PlanetsComponent implements OnInit {
     distance: any; name: string, 
     images: {png: string, webp: string} 
   };
-name: any
+  name: any
+  destinations: any
   ngOnInit(): void {
     this.name = {
       name: this.route.snapshot.params['name']
     }
     this.getDestinations();
     this.route.url
-    this.planet = {
-      name: this.route.snapshot.params['name'],
-      description: this.route.snapshot.params['description'],
-      images: this.route.snapshot.params['images'],
-      travel: this.route.snapshot.params['travel'],
-      distance: this.route.snapshot.params['distance']
-    }
     
     this.route.params.subscribe(
       (params: Params) => {
         this.name.name = params['name'];
       }
     )
+    this.route.data.subscribe(
+      (data: Data) => {
+        this.destinations = data['places']
+        for (let i = 0; i < this.destinations.length; i++) {
+          if (this.destinations[i].name.trim().toLowerCase() == this.name.name.trim().toLowerCase()) {
+            this.planet = this.destinations[i]
+            console.log(this.planet, "console checking")
+            break;
+          }
+        }
+        
+      }
+    )
   }
-  destinations: any
+  
   getDestinations() {
-    return this.getData.getData().subscribe((data) => {
-      this.destinations = [...Object.values(data)[1]]
+    return this.getData.getData('destinations').subscribe((data) => {
+      this.destinations = data
       console.log(this.destinations, "second?")
       for (let i = 0; i < this.destinations.length; i++) {
-      
         if (this.destinations[i].name.trim().toLowerCase() == this.name.name.trim().toLowerCase()) {
           this.planet = this.destinations[i]
+          console.log(this.planet, "console checking")
         }
       }
-      return this.destinations
     })
     
   }
+  // routeSwitching(Object: any) {
+  //   for (let i = 0; i < this.destinations.length; i++) {
+  //     if (this.destinations[i].name.trim().toLowerCase() == Object.name.name.trim().toLowerCase()) {
+  //       this.planet = this.destinations[i];
+  //       console.log(this.planet, "planet data");
+  //       break
+  //     }
+  //   }
+  //   console.log(Object, "gimme my test")
+  // }
 
 }

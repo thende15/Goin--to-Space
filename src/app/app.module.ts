@@ -12,6 +12,9 @@ import { DestinationsComponent } from './components/destinations/destinations.co
 
 import { DataService } from './data.service';
 import { PlanetsComponent } from './components/destinations/planets/planets.component';
+import { PersonnelComponent } from './components/crew/personnel/personnel.component';
+import { ToolsComponent } from './components/technology/tools/tools.component';
+import { PlanetResolverService } from './components/destinations/planet-resolver.service';
 
 
 @NgModule({
@@ -22,14 +25,15 @@ import { PlanetsComponent } from './components/destinations/planets/planets.comp
     CrewComponent, 
     TechnologyComponent, 
     DestinationsComponent, 
-    PlanetsComponent
+    PlanetsComponent, PersonnelComponent, ToolsComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule
   ],
-  providers: [DataService],
+  providers: [DataService,
+  PlanetResolverService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

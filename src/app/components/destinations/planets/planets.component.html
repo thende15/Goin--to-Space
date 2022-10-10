@@ -3,7 +3,7 @@
     <img [src]="planet.images.png" alt="" class="planets">
     <nav>
         <ul *ngFor="let planets of destinations">
-        <a [routerLink]="['/destinations', planets.name]"><li>{{planets.name}}</li></a>
+        <a [routerLink]="['/destination', planets.name]" id={{planets.name}}><li>{{planets.name}}</li></a>
         </ul>
     </nav>
     <!--  -->

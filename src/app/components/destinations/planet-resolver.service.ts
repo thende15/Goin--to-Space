@@ -9,8 +9,15 @@ import { DataService } from 'src/app/data.service';
 })
 export class PlanetResolverService implements Resolve<PlanetInterface>{
 
-  // resolve(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): PlanetInterface | Observable<PlanetInterface> | Promise<PlanetInterface> {
-  //   return this.getData.getData(route.params['name'])
-  // }
+  resolve(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): Observable<PlanetInterface> | Promise<PlanetInterface> {
+    console.log(route.parent?.routeConfig?.path!, "resolverpath")
+    if (route.parent?.routeConfig?.path! == 'destination') {
+      return this.getData.getData(route.parent?.routeConfig?.path! + 's')
+    } else {
+      return this.getData.getData(route.parent?.routeConfig?.path!)
+    }
+    
+    
+  }
   constructor(private getData: DataService) { }
 }

@@ -12,7 +12,8 @@ export class DataService {
   url = `${this.firebaseURL}${this.ext}`
   constructor(private http: HttpClient) { }
 
-  getData() {
+  getData(field: string): Observable<any> {
+    this.url = `${this.firebaseURL}${field}${this.ext}`
     return this.http.get(this.url)
   }
   //crew
