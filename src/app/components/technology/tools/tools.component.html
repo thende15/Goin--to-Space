@@ -1,1 +1,15 @@
-<p>tools works!</p>
+<section>
+    <h4>03 SPACE LAUNCH 101</h4>
+    <img [src]="tech.images.landscape" alt="" id="mobile">
+    <img [src]="tech.images.portrait" alt="" id="desktop">
+
+    <nav>
+        <ul *ngFor="let vehicles of tools">
+        <a [routerLink]="['/technology', vehicles.name]" id={{vehicles.name}}><li>{{vehicles.name}}</li></a>
+        </ul>
+    </nav>
+    <h4> THE TERMINOLOGY ... </h4>
+    <h2>{{tech.name | uppercase}}</h2>
+    <p>{{tech.description}}</p>
+
+</section>
