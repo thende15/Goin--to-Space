@@ -1,11 +1,12 @@
 <section>
     <h4>01 PICK YOUR DESTINATION</h4>
-    <img [src]="destinations[0].images.png" alt="" class="planets">
+    <img [src]="planet.images.png" alt="" class="planets">
     <nav>
         <ul *ngFor="let planets of destinations">
         <a [routerLink]="['/destinations', planets.name]"><li>{{planets.name}}</li></a>
         </ul>
     </nav>
+    <!--  -->
     <h2>{{planet.name | uppercase}}</h2>
     <p>{{planet.description}}</p>
     <article>

@@ -7,43 +7,55 @@ import { DataService } from 'src/app/data.service';
   styleUrls: ['./planets.component.css']
 })
 export class PlanetsComponent implements OnInit {
+  [x: string]: any;
 
   constructor(private route: ActivatedRoute,
     private getData: DataService) { }
   
 
-  name!: string;
-  //images: {png: string, webp: string},
-  planet!: { name: string, description: string,  distance: string, travel: string };
+  
+  // , description: string,  distance: string, travel: string, ,  
+  planet!: {
+    travel: any;
+    description: any;
+    distance: any; name: string, 
+    images: {png: string, webp: string} 
+  };
+name: any
   ngOnInit(): void {
+    this.name = {
+      name: this.route.snapshot.params['name']
+    }
     this.getDestinations();
     this.route.url
     this.planet = {
       name: this.route.snapshot.params['name'],
       description: this.route.snapshot.params['description'],
-      //images: this.route.snapshot.params['name'],
+      images: this.route.snapshot.params['images'],
       travel: this.route.snapshot.params['travel'],
       distance: this.route.snapshot.params['distance']
     }
-    for (let i = 0; i < this.destinations.length; i++) {
-      
-      if (this.destinations[i].name == this.name) {
-        this.planet = this.destinations[i]
+    
+    this.route.params.subscribe(
+      (params: Params) => {
+        this.name.name = params['name'];
       }
-      this.route.params.subscribe(
-        (params: Params) => {
-          this.planet.name = params['name']
-        }
-      )
-    }
+    )
   }
   destinations: any
   getDestinations() {
     return this.getData.getData().subscribe((data) => {
       this.destinations = [...Object.values(data)[1]]
       console.log(this.destinations, "second?")
+      for (let i = 0; i < this.destinations.length; i++) {
+      
+        if (this.destinations[i].name.trim().toLowerCase() == this.name.name.trim().toLowerCase()) {
+          this.planet = this.destinations[i]
+        }
+      }
       return this.destinations
     })
+    
   }
 
 }

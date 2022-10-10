@@ -13,6 +13,7 @@ import { DestinationsComponent } from './components/destinations/destinations.co
 import { DataService } from './data.service';
 import { PlanetsComponent } from './components/destinations/planets/planets.component';
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -20,7 +21,8 @@ import { PlanetsComponent } from './components/destinations/planets/planets.comp
     MainNavComponent,
     CrewComponent, 
     TechnologyComponent, 
-    DestinationsComponent, PlanetsComponent
+    DestinationsComponent, 
+    PlanetsComponent
   ],
   imports: [
     BrowserModule,

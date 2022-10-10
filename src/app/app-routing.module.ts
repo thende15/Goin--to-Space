@@ -10,7 +10,6 @@ const routes: Routes = [
   {path: "", redirectTo: "/home", pathMatch: "full"}, 
   {path: "home", component: HomeComponent}, 
   {path: "destination", component: DestinationsComponent, children: [
-    // {path: ":name", redirectTo: "destination/:name", pathMatch: 'full'},
     {path: ":name", component: PlanetsComponent}
   ]}, 
   {path: "crew", component: CrewComponent}, 
