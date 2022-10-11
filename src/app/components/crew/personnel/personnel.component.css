@@ -8,16 +8,36 @@ a {
 }
 /* .placement needs either column or row reverse in desk */
 @media (max-width: 420px) {
+    #desktop {
+        display: none;
+    }
+    #title {
+        margin-bottom: 32px;
+    }
     section {
         margin-top: 6rem;
+    }
+    .placement {
         display: flex;
         flex-direction: column;
         align-items: center;
         gap: 1rem;
     }
-    .planets {
-        height: 170px;
-        width: 170px;
+    .Douglas.Hurley {
+        height: 222px;
+        width: 177.12px;
+    }
+    .Mark.Shuttleworth {
+        height: 222px;
+        width: 153.92px;
+    }
+    .Victor.Glover {
+        height: 222px;
+        width: 180.73px;
+    }
+    .Anousheh.Ansari {
+        height: 223px;
+        width: 226.15px;
     }
     nav {
         display: flex;
@@ -27,5 +47,99 @@ a {
     p {
         width: 327px;
         text-align: center;
+        line-height: 25px;
+    }
+    #role {
+        opacity: 0.5;
+        font-family: 'Bellefair';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 18px;
+        text-align: center;
+        margin-bottom: 0%;
+    }
+    #name {
+        font-family: 'Bellefair';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 24px;
+        line-height: 28px;
+        text-align: center;
+        margin-top: 10px;
+    }
+}
+@media (min-width: 421px) {
+    #mobile {
+        display: none;
+    }
+    #title {
+        margin-bottom: 54px;
+        text-align: left;
+        margin-left: 100px;
+        font-size: 28px;
+    }
+    section {
+        margin-top: 6rem;
+    }
+    #content {
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        justify-content: flex-start;
+    }
+    .placement {
+        display: flex;
+        flex-direction: row-reverse;
+        /* align-items: center; */
+        gap: 1rem;
+    }
+    .Douglas.Hurley {
+        /* height: 712px; */
+        width: 458.07px;
+    }
+    .Mark.Shuttleworth {
+        /* height: 654px; */
+        width: 393.44px;
+    }
+    .Victor.Glover {
+        /* height: 681px; */
+        width: 494.39px;
+    }
+    .Anousheh.Ansari {
+        /* height: 607px; */
+        width: 555.57px;
+    }
+    nav {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        margin-top: 100px;
+        margin-bottom: 100px;
+    }
+    p {
+        width: 444px;
+        text-align: left;
+        line-height: 25px;
+        font-size: 18;
+    }
+    #role {
+        opacity: 0.5;
+        font-family: 'Bellefair';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 32px;
+        line-height: 18px;
+        text-align: left;
+        margin-bottom: 0%;
+    }
+    #name {
+        font-family: 'Bellefair';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 56px;
+        line-height: 28px;
+        text-align: left;
+        margin-top: 20px;
     }
 }

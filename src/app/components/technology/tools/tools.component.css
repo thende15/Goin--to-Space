@@ -10,6 +10,10 @@ a {
     #desktop {
         display: none;
     }
+    #mobile {
+        width: 100vw;
+        /* height: 170px; */
+    }
     section {
         margin-top: 6rem;
         display: flex;
