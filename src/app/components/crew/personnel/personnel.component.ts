@@ -34,7 +34,6 @@ export class PersonnelComponent implements OnInit {
         for (let i = 0; i < this.personnel.length; i++) {
           if (this.personnel[i].name.trim().toLowerCase() == this.name.name.trim().toLowerCase()) {
             this.crew = this.personnel[i]
-            console.log(this.crew, "console checking")
             break;
           }
         }
@@ -44,9 +43,8 @@ export class PersonnelComponent implements OnInit {
   }
   personnel: any
   getPersonnel() {
-    return this.getData.getData('technology').subscribe((data) => {
+    return this.getData.getData('crew').subscribe((data) => {
       this.personnel = data
-      console.log(this.personnel, "second?")
       for (let i = 0; i < this.personnel.length; i++) {
         if (this.personnel[i].name.trim().toLowerCase() == this.name.name.trim().toLowerCase()) {
           this.crew = this.personnel[i]

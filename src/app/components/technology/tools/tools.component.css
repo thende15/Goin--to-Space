@@ -7,6 +7,9 @@ a {
     text-decoration: none;
 }
 @media (max-width: 420px) {
+    #desktop {
+        display: none;
+    }
     section {
         margin-top: 6rem;
         display: flex;

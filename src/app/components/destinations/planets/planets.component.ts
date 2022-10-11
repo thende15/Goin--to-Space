@@ -28,7 +28,7 @@ export class PlanetsComponent implements OnInit {
       name: this.route.snapshot.params['name']
     }
     this.getDestinations();
-    this.route.url
+
     
     this.route.params.subscribe(
       (params: Params) => {

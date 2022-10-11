@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 import { DataService } from 'src/app/data.service';
 
 @Component({
@@ -8,10 +9,11 @@ import { DataService } from 'src/app/data.service';
 })
 export class DestinationsComponent implements OnInit {
 
-  constructor(private getData: DataService) { }
+  constructor(private getData: DataService, 
+    private route: ActivatedRoute) { }
   
   ngOnInit(): void {
-    
+    this.route.url
   }
 
   
