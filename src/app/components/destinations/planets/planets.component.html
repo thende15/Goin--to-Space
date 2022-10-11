@@ -1,17 +1,30 @@
 <section>
-    <h4>01 PICK YOUR DESTINATION</h4>
-    <img [src]="planet.images.png" alt="" class="planets">
+    <h4 id="title">01 PICK YOUR DESTINATION</h4>
+    <div id="container">
+    <img [src]="planet.images.webp" alt="" class="planets" id="mobile">
+    <img [src]="planet.images.png" alt="" class="planets" id="desktop">
+    <div id="content">
     <nav>
         <ul *ngFor="let planets of destinations">
-        <a [routerLink]="['/destination', planets.name]" id={{planets.name}}><li>{{planets.name}}</li></a>
+        <a [routerLink]="['/destination', planets.name]" id={{planets.name}}><li>{{planets.name | uppercase}}</li></a>
         </ul>
     </nav>
 
     <h2>{{planet.name | uppercase}}</h2>
-    <p>{{planet.description}}</p>
+    <div class="description">
+        <p>{{planet.description}}</p>
+    </div>
+    
+
     <article>
-        <p>AVG. DISTANCE <br> {{planet.distance}}</p>
-        <p>EST. TRAVEL TIME <br> {{planet.travel}}</p>
+        <div class="numb-container"><p>AVG. DISTANCE </p>
+            <p class="numbers">{{planet.distance | uppercase}}</p></div>
+        <div class="numb-container"><p>EST. TRAVEL TIME  </p>
+            <p class="numbers">{{planet.travel | uppercase}}</p></div>
+        
+        
     </article>
+</div>
+</div>
 </section>
 

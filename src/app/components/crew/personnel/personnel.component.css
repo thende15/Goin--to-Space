@@ -6,6 +6,7 @@ li {
 a {
     text-decoration: none;
 }
+/* .placement needs either column or row reverse in desk */
 @media (max-width: 420px) {
     section {
         margin-top: 6rem;

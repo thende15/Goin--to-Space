@@ -2,21 +2,32 @@ li {
     font-family: 'Barlow Condensed', sans-serif;
     color: #ffffff;
     list-style: none;
+    text-align: center;
 }
 a {
     text-decoration: none;
 }
 @media (max-width: 420px) {
+    #desktop {
+        display: none;
+    }
     section {
         margin-top: 6rem;
+    }
+    #container {
         display: flex;
         flex-direction: column;
         align-items: center;
-        gap: 1rem;
+    }
+    #content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
     .planets {
         height: 170px;
         width: 170px;
+        padding: 0.5rem;
     }
     nav {
         display: flex;
@@ -24,7 +35,88 @@ a {
         justify-content: center;
     }
     p {
-        width: 327px;
         text-align: center;
+        line-height: 25px;
+    }
+    .description {
+        width: 327px;
+        height: 125px;
+        border: 50px;
+        padding-bottom: 32px;
+    }
+    .numbers {
+        font-family: 'Bellefair', serif;
+        font-size: 28px;
+    }
+    h2 {
+        margin: 0;
+    }
+    article {
+        margin-top: 32px;
+    }
+}
+@media (min-width: 421px) {
+    #mobile {
+        display: none;
+    }
+    #title {
+        text-align: left;
+        margin-left: 140px;
+        margin-bottom: 80px;
+    }
+    section {
+        margin-top: 6rem;
+        width: 100vw;
+    }
+    #container {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+    }
+    #content {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        width: 445px;
+    }
+    .planets {
+        padding: 0.5rem;
+        height: 445px;
+        width: 445px;
+    }
+    nav {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+    p {
+        text-align: left;
+        line-height: 25px;
+    }
+    li {
+        text-align: left;
+    }
+    .description {
+        width: 327px;
+        height: 125px;
+        border: 50px;
+        padding-bottom: 54px;
+    }
+    .numbers {
+        font-family: 'Bellefair', serif;
+        font-size: 28px;
+        display: block;
+    }
+    .numb-container {
+        margin-right: 80px;
+    }
+    h2 {
+        margin: 0;
+    }
+    article {
+        margin-top: 32px;
+        display: flex;
+        flex-direction: row;
     }
 }
