@@ -2,6 +2,7 @@ li {
     font-family: 'Barlow Condensed', sans-serif;
     color: #ffffff;
     list-style: none;
+    text-transform: uppercase;
 }
 a {
     text-decoration: none;
@@ -15,7 +16,7 @@ header {
         flex-direction: row;
         justify-content: space-around;
         align-items: center;
-        /* position: absolute; */
+        
     }
     nav {
         display: flex;
@@ -23,20 +24,28 @@ header {
         align-items: center;
         background: rgba(255, 255, 255, 0.04);
         backdrop-filter: blur(40.7742px);
+        
     }
 }
 @media (min-width: 421px) {
     header {
         display: flex;
         flex-direction: row;
-        justify-content: space-around;
+        justify-content: space-between;
         align-items: center;
     }
     nav {
         display: flex;
         flex-direction: row;
+        justify-content: center;
+        gap: 3rem;
         align-items: center;
         background: rgba(255, 255, 255, 0.04);
         backdrop-filter: blur(40.7742px);
+        width: 660px;
+        height: 96px;
+    }
+    img {
+        margin-left: 30px;
     }
 }
