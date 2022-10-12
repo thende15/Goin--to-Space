@@ -6,7 +6,7 @@
 
     <nav>
         <div *ngFor="let vehicles of tools ; let i = index" class="nav-bubbles">
-        <a [routerLink]="['/technology', vehicles.name]" id={{vehicles.name}}><p>{{i + 1}}</p></a>
+        <a [routerLink]="['/technology', vehicles.name]" id={{vehicles.name}} routerLinkActive="active"><p>{{i + 1}}</p></a>
         </div>
     </nav>
     <div id="content">

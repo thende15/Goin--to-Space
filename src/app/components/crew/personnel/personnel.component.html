@@ -6,7 +6,7 @@
         <div id="content">
         <nav>
             <ul *ngFor="let people of personnel">
-            <a [routerLink]="['/crew', people.name]" id={{people.name}}><li>{{people.name}}</li></a>
+            <a [routerLink]="['/crew', people.name]" id={{people.name}} routerLinkActive="active"><li>{{people.name}}</li></a>
             </ul>
         </nav>
         <div>

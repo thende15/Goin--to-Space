@@ -11,6 +11,73 @@ header {
     background: none;
 }
 @media (max-width: 420px) {
+    #desk-head {
+        display: none;
+    }
+
+    .navContainer{
+        position: relative;
+        top:0;
+        width: 100vw;
+        z-index: 13;
+    }
+    /* .navLogo img {
+        height: 20px ;
+        width: 75.5px;
+    } */
+    .navItems{
+        display: flex;
+        flex-direction: column;
+        margin: 64px 0px 24px 32px;
+
+        /* margin-left: 32px; /
+        / margin-top: 64px;
+        margin-bottom: 24px;  */
+    }
+    img {
+        display: block;
+    }
+    .hamburger {
+        background-image: url(../../../assets/shared/icon-hamburger.svg);
+        height: 16px;
+        width: 20px;
+        border: none;
+    }
+    .closeButton{
+        background-image: url(../../../assets/shared/icon-close.svg);
+        height: 18px;
+        width: 18px;
+        border: none;
+    }
+    .grid-container .hamburger {
+        margin-right: 28px;
+    }
+    .grid-container .closeButton {
+        margin-right: 33px;
+    }
+    .navContainer{
+        background-color: #FFF;
+        height: 64px;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        align-items: center;
+        z-index: 4;
+    }
+    .navLogo{
+        justify-self: center;
+    }
+    .displayNone {
+        display: none;
+    }
+    
+    .displayFlex {
+        display: flex;
+    }
+    .displayBlock {
+        display: block;
+    }
+    
+    /* break for actual content */
     header {
         display: flex;
         flex-direction: row;
@@ -28,6 +95,9 @@ header {
     }
 }
 @media (min-width: 421px) {
+    #mobile-head {
+        display: none;
+    }
     header {
         display: flex;
         flex-direction: row;

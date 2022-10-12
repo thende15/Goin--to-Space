@@ -2,8 +2,27 @@
     <img src="../../../assets/shared/logo.svg" alt="logo">
     <nav>
         <a routerLink="home"><li>00 Home</li></a>
-        <a [routerLink]="['/destination', 'moon']"><li>01 Destination</li></a>
-        <a [routerLink]="['/crew', 'Douglas Hurley']"><li>02 Crew</li></a>
-        <a [routerLink]="['/technology', 'Launch vehicle']"><li>03 Technology</li></a>
+        <a [routerLink]="['/destination', 'moon']" routerLinkActive="active"><li>01 Destination</li></a>
+        <a [routerLink]="['/crew', 'Douglas Hurley']" routerLinkActive="active"><li>02 Crew</li></a>
+        <a [routerLink]="['/technology', 'Launch vehicle']" routerLinkActive="active"><li>03 Technology</li></a>
     </nav>
 </header>
+<!-- <section id="mobile-head">
+
+<header  class="backDrop" id="backDrop" (click)="toggleNavModal()" class="displayNone">
+  <img class="navLogo" src="../../../assets/shared/logo.svg" alt="logo">
+<section class="navModal displayNone" id="navModal">
+  <nav class="navItems">
+    <a routerLink="home"><li>00 Home</li></a>
+    <a [routerLink]="['/destination', 'moon']"><li>01 Destination</li></a>
+    <a [routerLink]="['/crew', 'Douglas Hurley']"><li>02 Crew</li></a>
+    <a [routerLink]="['/technology', 'Launch vehicle']"><li>03 Technology</li></a>
+  </nav>
+</section>
+<div class="navContainer grid-container">
+  <button class="hamburger grid-item displayBlock" id="hamburger" (click)="toggleNavModal()"></button>
+  <button class="closeButton grid-item displayNone" id="closeButton" (click)="toggleNavModal()"></button>
+</div>
+</header>
+</section>
+ -->
