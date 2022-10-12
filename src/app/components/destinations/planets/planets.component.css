@@ -41,8 +41,8 @@ a {
     .description {
         width: 327px;
         height: 125px;
-        border: 50px;
-        padding-bottom: 32px;
+        border-bottom: solid 1px #383B4B;
+        padding-bottom: 54px;
     }
     .numbers {
         font-family: 'Bellefair', serif;
@@ -100,7 +100,7 @@ a {
     .description {
         width: 327px;
         height: 125px;
-        border: 50px;
+        border-bottom: solid 1px #383B4B;
         padding-bottom: 54px;
     }
     .numbers {

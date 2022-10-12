@@ -1,5 +1,5 @@
 li {
-    font-family: 'Barlow Condensed', sans-serif;
+    font-family: 'Bellefair';
     color: #ffffff;
     list-style: none;
 }
@@ -21,17 +21,54 @@ a {
         align-items: center;
         gap: 1rem;
     }
-    .planets {
-        height: 170px;
-        width: 170px;
+    #content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
     nav {
         display: flex;
         flex-direction: row;
         justify-content: center;
+        gap: 16px;
+        margin-top: 35px;
     }
-    p {
+    .nav-bubbles {
+        width: 40px;
+        height: 40px;
+        border-radius: 30px;
+        border: #ffffff 1px solid;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-content: center;
+    }
+    .fix {
         width: 327px;
         text-align: center;
+        line-height: 25px;
+    }
+    p {
+        text-align: center;
+    }
+    #title {
+        font-family: 'Barlow Condensed';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 17px;
+        text-align: center;
+        letter-spacing: 2.3625px;
+        color: #D0D6F9;
+    }
+    #name {
+        font-family: 'Bellefair';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 24px;
+        line-height: 28px;
+        text-align: center;
+        margin-top: 10px;
+        margin-bottom: 18px;
     }
 }

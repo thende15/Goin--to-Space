@@ -4,12 +4,13 @@
     <img [src]="tech.images.portrait" alt="" id="desktop">
 
     <nav>
-        <ul *ngFor="let vehicles of tools">
-        <a [routerLink]="['/technology', vehicles.name]" id={{vehicles.name}}><li>{{vehicles.name}}</li></a>
-        </ul>
+        <div *ngFor="let vehicles of tools ; let i = index" class="nav-bubbles">
+        <a [routerLink]="['/technology', vehicles.name]" id={{vehicles.name}}><p>{{i + 1}}</p></a>
+        </div>
     </nav>
-    <h4> THE TERMINOLOGY ... </h4>
-    <h2>{{tech.name | uppercase}}</h2>
-    <p>{{tech.description}}</p>
-
+    <div id="content">
+    <h4 id="title"> THE TERMINOLOGY ... </h4>
+    <h2 id="name">{{tech.name | uppercase}}</h2>
+    <p class="fix">{{tech.description}}</p>
+    </div>
 </section>
