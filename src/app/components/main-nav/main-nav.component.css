@@ -13,137 +13,78 @@ header {
 @media (max-width: 420px) {
 
 
-    /* The Modal (background) */
-.modal {
-    display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
-    left: 0;
-    top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
-    background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
-  }
-  
-  /* Modal Content/Box */
-  .modal-content {
-    background-color: #fefefe;
-    margin: 15% auto; /* 15% from the top and centered */
-    padding: 20px;
-    border: 1px solid #888;
-    width: 80%; /* Could be more or less, depending on screen size */
-  }
-  
-  /* The Close Button */
-  .close {
-    color: #aaa;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
-  }
-  
-  .close:hover,
-  .close:focus {
-    color: black;
-    text-decoration: none;
-    cursor: pointer;
-  }
-  
-    /* Aaron's modal */
-    #desktop {
-        display: none;
-    }
+    .sidenav {
+        height: 100%;
+        width: 60vw;
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        right: 0;
+        background-color: #111;
+        overflow-x: hidden;
+        transition: 0.5s;
 
-    .navContainer{
-        position: relative;
-        top:0;
-        width: 100vw;
-        z-index: 13;
-    }
-    /* .navLogo img {
-        height: 20px ;
-        width: 75.5px;
-    } */
-    .navItems{
-        display: flex;
-        flex-direction: column;
-        margin: 64px 0px 24px 32px;
-
-        /* margin-left: 32px; /
-        / margin-top: 64px;
-        margin-bottom: 24px;  */
-    }
-    img {
-        display: block;
-    }
-    .hamburger {
-        background-image: url(../../../assets/shared/icon-hamburger.svg);
-        /* height: 16px;
-        width: 20px; */
-        border: none;
-    }
-    .closeButton{
-        background-image: url(../../../assets/shared/icon-close.svg);
-        /* height: 18px;
-        width: 18px; */
-        border: none;
-    }
-    .grid-container .hamburger {
-        margin-right: 28px;
-    }
-    .grid-container .closeButton {
-        margin-right: 33px;
-    }
-    .navContainer{
-       
-        height: 64px;
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        align-items: center;
-        z-index: 4;
-    }
-    .navLogo{
-        justify-self: center;
-    }
-    .displayNone {
-        display: none;
-    }
-    
-    .displayFlex {
-        display: flex;
-    }
-    .displayBlock {
-        display: block;
-    }
-    
-    /* break for actual content */
-    header {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-around;
-        align-items: center;
-        
-    }
-    nav {
         display: flex;
         flex-direction: column;
         align-items: center;
         background: rgba(255, 255, 255, 0.04);
         backdrop-filter: blur(40.7742px);
         
+      }
+      .displayNone {
+        display: none;
+      }
+      .displayBlock {
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+      }
+
+      /* space */
+      #main {
+        transition: margin-left .5s;
+        padding: 16px;
+      }
+      button {
+        background: none;
+        border: none;
+      }
+      #hamburger {
+        background: none;
+        border: none;
+      }
+      #closeButton {
+        background: none;
+        border: none;
+        right: 0;
+        position: relative;
+        align-self: flex-end;
+        margin-top: 2rem;
+        margin-bottom: 4rem;
+      }
+    
+    /* break for actual content 
+    */
+    #desktop {
+        display: none;
     }
-    .active {
-        border-bottom: #ffffff solid 3px;
+    header {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        
     }
+
+
     li {
         padding-bottom: 8px;
+        margin-left: 2rem;
     }
     li:hover {
         border-bottom: #ffffff solid 3px;
         opacity: 0.5;
-    }
+    } 
 }
 @media (min-width: 421px) {
     #mobile {
