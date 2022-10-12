@@ -134,6 +134,16 @@ header {
         backdrop-filter: blur(40.7742px);
         
     }
+    .active {
+        border-bottom: #ffffff solid 3px;
+    }
+    li {
+        padding-bottom: 8px;
+    }
+    li:hover {
+        border-bottom: #ffffff solid 3px;
+        opacity: 0.5;
+    }
 }
 @media (min-width: 421px) {
     #mobile {
@@ -158,5 +168,15 @@ header {
     }
     img {
         margin-left: 30px;
+    }
+    .active {
+        border-bottom: #ffffff solid 3px;
+    }
+    li {
+        padding-bottom: 12px;
+    }
+    li:hover {
+        border-bottom: #ffffff solid 3px;
+        opacity: 0.5;
     }
 }

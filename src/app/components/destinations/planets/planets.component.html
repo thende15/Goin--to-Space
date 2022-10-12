@@ -6,7 +6,7 @@
     <div id="content">
     <nav>
         <ul *ngFor="let planets of destinations">
-        <a [routerLink]="['/destination', planets.name]" id={{planets.name}} routerLinkActive="active"><li>{{planets.name | uppercase}}</li></a>
+        <a [routerLink]="['/destination', planets.name]" id={{planets.name}} ><li routerLinkActive="active">{{planets.name | uppercase}}</li></a>
         </ul>
     </nav>
 

@@ -54,6 +54,15 @@ a {
     article {
         margin-top: 32px;
     }
+    .active {
+        border-bottom: #ffffff solid 3px;
+    }
+    ul {
+        padding-left: 0;
+    }
+    li {
+        padding-bottom: 8px;
+    }
 }
 @media (min-width: 421px) {
     #mobile {
@@ -89,6 +98,7 @@ a {
         display: flex;
         flex-direction: row;
         justify-content: center;
+        gap: 2rem;
     }
     p {
         text-align: left;
@@ -96,6 +106,18 @@ a {
     }
     li {
         text-align: left;
+        padding-bottom: 12px;
+    }
+    .active {
+        border-bottom: #ffffff solid 3px;
+    }
+    li:hover {
+        border-bottom: #ffffff solid 3px;
+        opacity: 0.5;
+    }
+    ul {
+        padding-left: 0;
+        padding-bottom: 8px;
     }
     .description {
         width: 327px;
