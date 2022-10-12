@@ -23,6 +23,14 @@ a {
         align-items: center;
         gap: 1rem;
     }
+    .image {
+        width: 327px;
+        border-bottom: solid 1px #383B4B;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: flex-end;
+    }
     .Douglas.Hurley {
         height: 222px;
         width: 177.12px;
@@ -43,6 +51,7 @@ a {
         display: flex;
         flex-direction: row;
         justify-content: center;
+        gap: 1rem;
     }
     p {
         width: 327px;
@@ -68,16 +77,41 @@ a {
         text-align: center;
         margin-top: 10px;
     }
+    .space {
+        display: flex;
+        flex-direction: row;
+    }
+    .dots {
+        height: 15px;
+        width: 15px;
+        background-color: #ffffff;
+        border-radius: 30px;
+        opacity: 0.17;
+    }
+    .dots:hover {
+        height: 15px;
+        width: 15px;
+        background-color: #ffffff;
+        border-radius: 30px;
+        opacity: 0.5;
+    }
+    .active {
+        height: 15px;
+        width: 15px;
+        background-color: #ffffff;
+        border-radius: 30px;
+    }
 }
 @media (min-width: 421px) {
     #mobile {
         display: none;
     }
     #title {
-        margin-bottom: 54px;
+        /* margin-bottom: 54px; */
         text-align: left;
-        margin-left: 100px;
+
         font-size: 28px;
+        margin-top: 10rem;
     }
     section {
         margin-top: 6rem;
@@ -85,7 +119,7 @@ a {
     #content {
         display: flex;
         flex-direction: column-reverse;
-        align-items: center;
+        align-items: flex-start;
         justify-content: flex-start;
     }
     .placement {
@@ -113,9 +147,34 @@ a {
     nav {
         display: flex;
         flex-direction: row;
-        justify-content: center;
+        justify-content: flex-start;
         margin-top: 100px;
         margin-bottom: 100px;
+        gap: 1rem;
+    }
+    .space {
+        display: flex;
+        flex-direction: row;
+    }
+    .dots {
+        height: 15px;
+        width: 15px;
+        background-color: #ffffff;
+        border-radius: 30px;
+        opacity: 0.17;
+    }
+    .dots:hover {
+        height: 15px;
+        width: 15px;
+        background-color: #ffffff;
+        border-radius: 30px;
+        opacity: 0.5;
+    }
+    .active {
+        height: 15px;
+        width: 15px;
+        background-color: #ffffff;
+        border-radius: 30px;
     }
     p {
         width: 444px;

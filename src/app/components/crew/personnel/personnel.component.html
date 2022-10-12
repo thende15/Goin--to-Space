@@ -1,13 +1,15 @@
 <section>
     <h4 id="title">02 MEET YOUR CREW</h4>
     <div class="placement">
+        <div class="image">
         <img [src]="crew.images.png" alt="" class="images" [class]="crew.name" id="mobile">
         <img [src]="crew.images.webp" alt="" class="images" [class]="crew.name" id="desktop">
+        </div>
         <div id="content">
         <nav>
-            <ul *ngFor="let people of personnel">
-            <a [routerLink]="['/crew', people.name]" id={{people.name}} routerLinkActive="active"><li>{{people.name}}</li></a>
-            </ul>
+            <div *ngFor="let people of personnel" class="space">
+            <a [routerLink]="['/crew', people.name]" id={{people.name}} routerLinkActive="active"><div class="dots"></div></a>
+            </div>
         </nav>
         <div>
             <h4 id="role"> {{crew.role | uppercase}} </h4>
